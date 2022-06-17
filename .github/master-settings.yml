@@ -1,0 +1,78 @@
+# Master Settings is applied to all of my repos
+# it sets up secrets, basic branch protection, and sets some basci settings I set on all repos
+settings:
+  # Either `true` to enable issues for this repository, `false` to disable them.
+  has_issues: true
+
+  # Either `true` to enable projects for this repository, or `false` to disable them.
+  # If projects are disabled for the organization, passing `true` will cause an API error.
+  has_projects: false
+
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: false
+
+  # Either `true` to enable downloads for this repository, `false` to disable them.
+  has_downloads: false
+
+  # Set the default branch for this repository.
+  default_branch: main
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: true
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: true
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: true
+
+  # Either `true` to enable automatic deletion of branches on merge, or `false` to disable
+  delete_branch_on_merge: true
+
+  # Either `true` to enable automated security fixes, or `false` to disable
+  # automated security fixes.
+  enable_automated_security_fixes: true
+
+  # Either `true` to enable vulnerability alerts, or `false` to disable
+  # vulnerability alerts.
+  enable_vulnerability_alerts: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: bug
+    color: CC0000
+    description: An issue with the system.
+
+  - name: feature
+    # If including a `#`, make sure to wrap it with quotes!
+    color: '#336699'
+    description: New functionality.
+
+branch_protections:
+  # branch protection can only be created for branches that exist.
+  - name: main
+    # https://docs.github.com/en/rest/reference/repos#update-branch-protection
+    # Branch Protection settings. Leave a value out to leave set at current repo settings
+    protection:
+      # Require at least one approving review on a pull request, before merging. Set to null to disable.
+      pr_options:
+        # The number of approvals required. (1-6)
+        required_approving_review_count: 1
+        # Dismiss approved reviews automatically when a new commit is pushed.
+        dismiss_stale_reviews: true
+      enforce_admins: false
+      # Prevent merge commits from being pushed to matching branches
+      require_linear_history: true
+      # Permit force pushes for all users with push access.
+      allow_force_pushes: true
+
+secrets:
+  - key: THIS_PAT
+    env: THIS_PAT
+  - key: DOCKERHUB_USERNAME
+    value: andrewthetechie
+  - key: DOCKERHUB_TOKEN
+    env: DOCKERHUB_TOKEN
