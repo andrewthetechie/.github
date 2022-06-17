@@ -1,7 +1,7 @@
-name: Run Cookiecutter
+name: Master Settings Sync
 on: [workflow_dispatch]
 jobs:
-  build:
+  master-settings-sync:
     strategy:
       matrix:
         repo: 
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    name: Checkout
+      name: Checkout
     - name: Run RepoManager
       uses: andrewthetechie/gha-repo-manager@v1.0.0
       env:
