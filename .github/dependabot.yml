@@ -1,10 +1,10 @@
 version: 2
 updates:
-  - package-ecosystem: "github_actions" 
+  - package-ecosystem: "github-actions" 
     directory: "/.github/workflows" 
     schedule:
       interval: "daily"
-  - package-ecosystem: "github_actions"
+  - package-ecosystem: "github-actions"
     directory: "/workflows" #
     schedule:
       interval: "daily"
