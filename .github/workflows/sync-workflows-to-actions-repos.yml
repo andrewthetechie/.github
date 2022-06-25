@@ -6,8 +6,8 @@ jobs:
       matrix:
         repo:
           - gha-clone-releases
-          # - gha-cookiecutter
-          # - gha-repo-manager
+          - gha-cookiecutter
+          - gha-repo-manager
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
