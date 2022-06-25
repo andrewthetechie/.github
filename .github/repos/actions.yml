@@ -1,0 +1,42 @@
+# Syncs actions workflow files to the github actions I maintain from actions/workflows
+files:
+# workflows
+  - src_file: actions/workflows/codeql.yml
+    dest_file: .github/workflows/codeql.yml
+    commit_msg: 'ci: update codeql workflow'
+  - src_file: actions/workflows/generate-docs.yml
+    dest_file: .github/workflows/generate-docs.yml
+    commit_msg: 'ci: update generate-docs workflow'
+  - src_file: actions/workflows/lint.yml
+    dest_file: .github/workflows/lint.yml
+    commit_msg: 'ci: update lint workflow'
+  - src_file: actions/workflows/release.yml
+    dest_file: .github/workflows/release.yml
+    commit_msg: 'ci: update release workflow'
+# dotfiles
+  - src_file: actions/dot-files/.dockerignore
+    dest_file: .dockerignore
+    commit_msg: 'ci: update .dockerignore'
+  - src_file: actions/dot-files/.flake8
+    dest_file: .flake8
+    commit_msg: 'ci: update .flake8'
+  - src_file: actions/dot-files/.gitignore
+    dest_file: .gitignore
+    commit_msg: 'ci: update .gitignore'
+  - src_file: actions/dot-files/.pre-commit-config.yaml
+    dest_file: .pre-commit-config.yaml
+    commit_msg: 'ci: update .pre-commit-config.yaml'
+# Dependabot
+  - src_file: actions/dot-files/.github/dependabot.yml
+    dest_file: .github/dependabot.yml
+    commit_msg: 'ci: update dependabot.yml'
+# Update generate_inputs
+  - src_file: actions/dot-files/.github/scripts/generate_inputs.py
+    dest_file: .github/scripts/generate_inputs.py
+    commit_msg: 'ci: update .github/scripts/generate_inputs.py'
+  - src_file: actions/dot-files/.github/scripts/README.md
+    dest_file: .github/scripts/README.md
+    commit_msg: 'ci: update .github/scripts/README.md'
+  - src_file: actions/dot-files/.github/scripts/replace.sed
+    dest_file: .github/scripts/replace.sed
+    commit_msg: 'ci: update .github/scripts/replace.sed'
