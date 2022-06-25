@@ -1,0 +1,17 @@
+# Syncs actions workflow files to the github actions I maintain from workflows/actions
+files:
+  - src_file: workflows/actions/codeql.yml
+    dest_file: .github/actions/codeql.yml
+    commit_msg: 'ci: update codeql workflow'
+  - src_file: workflows/actions/generate-docs.yml
+    dest_file: .github/actions/generate-docs.yml
+    commit_msg: 'ci: update generate-docs workflow'
+  - src_file: workflows/actions/integration.yml
+    dest_file: .github/actions/integration.yml
+    commit_msg: 'ci: update integration workflow'
+  - src_file: workflows/actions/lint.yml
+    dest_file: .github/actions/lint.yml
+    commit_msg: 'ci: update lint workflow'
+  - src_file: workflows/actions/release.yml
+    dest_file: .github/actions/release.yml
+    commit_msg: 'ci: update release workflow'
