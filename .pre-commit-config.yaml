@@ -11,3 +11,9 @@ repos:
   rev: v0.16.0
   hooks:
   - id: gitlint
+- repo: local
+  hooks:
+    - id: run-actionlint
+      name: Run Actionlint
+      entry: make actionlint
+      language: system
