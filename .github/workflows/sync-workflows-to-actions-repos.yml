@@ -5,8 +5,8 @@ jobs:
     strategy:
       matrix:
         repo: 
-          # - gha-clone-releases
-          # - gha-cookiecutter
+          - gha-clone-releases
+          - gha-cookiecutter
           - gha-repo-manager
     runs-on: ubuntu-latest
     steps:
