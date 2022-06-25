@@ -6,8 +6,8 @@ jobs:
       matrix:
         repo:
           - gha-clone-releases
-          - gha-cookiecutter
-          - gha-repo-manager
+          # - gha-cookiecutter
+          # - gha-repo-manager
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -18,7 +18,7 @@ jobs:
         # Apply your settings to the repo, can also be check to just check repo settings vs your file or validate, to validate your
         # file is valid
         action: apply
-        settings_file: .github/workflow_sync/actions.yml
+        settings_file: .github/repos/actions.yml
         # need a PAT that can edit repo settings
         token: ${{ secrets.THIS_PAT }}
         repo: andrewthetechie/${{ matrix.repo }}
