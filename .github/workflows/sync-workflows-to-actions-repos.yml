@@ -4,7 +4,7 @@ jobs:
   workflow-sync:
     strategy:
       matrix:
-        repo: 
+        repo:
           - gha-clone-releases
           - gha-cookiecutter
           - gha-repo-manager

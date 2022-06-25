@@ -4,7 +4,7 @@ jobs:
   master-settings-sync:
     strategy:
       matrix:
-        repo: 
+        repo:
           - andrewthetechie
           - cloudquery-policy-to-s3
           - complexity-docker

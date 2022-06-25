@@ -5,10 +5,6 @@ files:
     commit_msg: 'ci: update codeql workflow'
   - src_file: workflows/actions/generate-docs.yml
     dest_file: .github/workflows/generate-docs.yml
-    commit_msg: 'ci: update generate-docs workflow'
-  - src_file: workflows/actions/integration.yml
-    dest_file: .github/workflows/integration.yml
-    commit_msg: 'ci: update integration workflow'
   - src_file: workflows/actions/lint.yml
     dest_file: .github/workflows/lint.yml
     commit_msg: 'ci: update lint workflow'
