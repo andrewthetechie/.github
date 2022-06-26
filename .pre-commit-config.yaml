@@ -11,9 +11,7 @@ repos:
   rev: v0.16.0
   hooks:
   - id: gitlint
-- repo: local
+- repo: https://github.com/rhysd/actionlint
+  rev: v1.6.14
   hooks:
-    - id: run-actionlint
-      name: Run Actionlint
-      entry: make actionlint
-      language: system
+    - id: actionlint
