@@ -33,7 +33,7 @@ jobs:
           # Apply your settings to the repo, can also be check to just check repo settings vs your file or validate, to validate your
           # file is valid
           action: apply
-          settings_file: .github/rm/master-settings.yml
+          settings_file: .github/rm-config/master-settings.yml
           # need a PAT that can edit repo settings
           token: ${{ secrets.THIS_PAT }}
           repo: andrewthetechie/${{ matrix.repo }}
