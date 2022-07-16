@@ -18,6 +18,8 @@ jobs:
           - pydantic-aioredis
           - pydantic-pynamodb
           - sns-sub-manager
+          - dd-metric
+          - dd-event-rs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
