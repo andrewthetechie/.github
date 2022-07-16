@@ -1,0 +1,26 @@
+# Syncs rust workflow files to the github rust I maintain from rust/workflows
+files:
+  # workflows
+  - src_file: rust/workflows/release-please.yml
+    dest_file: .github/workflows/release-please.yml
+    commit_msg: "ci: update release-please workflow"
+  - src_file: rust/workflows/release.yml
+    dest_file: .github/workflows/release.yml
+    commit_msg: "ci: update release workflow"
+  - src_file: rust/workflows/test.yml
+    dest_file: .github/workflows/test.yml
+    commit_msg: "ci: update test workflow"
+  # dotfiles
+  - src_file: rust/dot-files/.yamllint
+    dest_file: .yamllint
+    commit_msg: "ci: update .yamllint"
+  - src_file: rust/dot-files/.dockerignore
+    dest_file: .dockerignore
+    commit_msg: "ci: update .dockerignore"
+  - src_file: rust/dot-files/.gitignore
+    dest_file: .gitignore
+    commit_msg: "ci: update .gitignore"
+  # Dependabot
+  - src_file: rust/dot-files/.github/dependabot.yml
+    dest_file: .github/dependabot.yml
+    commit_msg: "ci: update dependabot.yml"

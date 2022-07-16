@@ -1,0 +1,37 @@
+name: Repo Manager Master Settings Sync
+# Syncs master settings to most repos.
+on: [workflow_dispatch]
+jobs:
+  master-settings-sync:
+    strategy:
+      matrix:
+        repo:
+          - andrewthetechie
+          - cloudquery-policy-to-s3
+          - complexity-docker
+          - geekbot-api-py
+          - gha-clone-releases
+          - gha-cookiecutter
+          - gha-repo-manager
+          - healthchecksio-check-k8s-operator
+          - py-healthchecks.io
+          - pydantic-aioredis
+          - pydantic-pynamodb
+          - sns-sub-manager
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+      - name: Run RepoManager Master Settings
+        uses: andrewthetechie/gha-repo-manager@v1.0.0
+        env:
+          THIS_PAT: ${{ secrets.THIS_PAT }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        with:
+          # Apply your settings to the repo, can also be check to just check repo settings vs your file or validate, to validate your
+          # file is valid
+          action: apply
+          settings_file: .github/rm/master-settings.yml
+          # need a PAT that can edit repo settings
+          token: ${{ secrets.THIS_PAT }}
+          repo: andrewthetechie/${{ matrix.repo }}
