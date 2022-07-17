@@ -20,6 +20,9 @@ files:
   - src_file: rust/dot-files/.gitignore
     dest_file: .gitignore
     commit_msg: "ci: update .gitignore"
+  - src_file: rust/dot-files/.pre-commit-config.yaml
+    dest_file: .pre-commit-conifg.yaml
+    commit_msg: "ci: update pre-commit"
   # Dependabot
   - src_file: rust/dot-files/.github/dependabot.yml
     dest_file: .github/dependabot.yml
