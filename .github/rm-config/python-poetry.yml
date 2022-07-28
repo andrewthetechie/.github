@@ -1,35 +1,35 @@
 # Syncs rust workflow files to the github rust I maintain from rust/workflows
 files:
   # workflows
-  - src_file: python/workflows/release-please.yml
+  - src_file: python-poetry/workflows/release-please.yml
     dest_file: .github/workflows/release-please.yml
     commit_msg: "ci: update release-please workflow"
-  - src_file: python/workflows/release.yml
+  - src_file: python-poetry/workflows/release.yml
     dest_file: .github/workflows/release.yml
     commit_msg: "ci: update release workflow"
-  - src_file: python/workflows/pre-release.yml
+  - src_file: python-poetry/workflows/pre-release.yml
     dest_file: .github/workflows/pre-release.yml
     commit_msg: "ci: update pre-release workflow"
-  - src_file: python/workflows/tests.yml
+  - src_file: python-poetry/workflows/tests.yml
     dest_file: .github/workflows/tests.yml
     commit_msg: "ci: update tests workflow"
-  - src_file: python/workflows/labeler.yml
+  - src_file: python-poetry/workflows/labeler.yml
     dest_file: .github/workflows/labeler.yml
     commit_msg: "ci: update labeler workflow"
   # dotfiles
-  - src_file: python/dot-files/.flake8
+  - src_file: python-poetry/dot-files/.flake8
     dest_file: .flake8
     commit_msg: "ci: update .flake8"
-  - src_file: python/dot-files/.pre-commit-config.yaml
+  - src_file: python-poetry/dot-files/.pre-commit-config.yaml
     dest_file: .pre-commit-config.yaml
     commit_msg: "ci: update .pre-commit-config.yaml"
-  - src_file: python/dot-files/.prettierignore
+  - src_file: python-poetry/dot-files/.prettierignore
     dest_file: .prettierignore
     commit_msg: "ci: update .prettierignore"
-  - src_file: python/dot-files/labels.yml
+  - src_file: python-poetry/dot-files/labels.yml
     dest_file: .github/labels.yml
     commit_msg: "ci: update .github/labels.yml"
   # Dependabot
-  - src_file: python/dot-files/dependabot.yml
+  - src_file: python-poetry/dot-files/dependabot.yml
     dest_file: .github/dependabot.yml
     commit_msg: "ci: update dependabot.yml"
