@@ -1,0 +1,24 @@
+name: Repo Manager Github Rust
+# Repo Manager run to sync rust repos. Uses .github/repos/rust.yml as its config
+on: [workflow_dispatch]
+jobs:
+  workflow-sync:
+    strategy:
+      matrix:
+        repo:
+          - pydantic-aioredis
+          - pydantic-pynamodb
+          - py-healthchecks.io
+          - sns-sub-manager
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+      - name: Run RepoManager Rust
+        uses: andrewthetechie/gha-repo-manager@v1.1.0
+        with:
+          action: apply
+          settings_file: .github/rm-config/rust.yml
+          # need a PAT that can edit repo settings
+          token: ${{ secrets.THIS_PAT }}
+          repo: andrewthetechie/${{ matrix.repo }}
