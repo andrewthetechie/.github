@@ -1,5 +1,5 @@
-name: Repo Manager Github Rust
-# Repo Manager run to sync rust repos. Uses .github/repos/rust.yml as its config
+name: Repo Manager Github python-poetry
+
 on: [workflow_dispatch]
 jobs:
   workflow-sync:
@@ -18,7 +18,7 @@ jobs:
         uses: andrewthetechie/gha-repo-manager@v1.1.0
         with:
           action: apply
-          settings_file: .github/rm-config/rust.yml
+          settings_file: .github/rm-config/python-poetry.yml
           # need a PAT that can edit repo settings
           token: ${{ secrets.THIS_PAT }}
           repo: andrewthetechie/${{ matrix.repo }}
