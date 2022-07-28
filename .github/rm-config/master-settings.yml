@@ -78,3 +78,10 @@ secrets:
     env: DOCKERHUB_TOKEN
   - key: DISCORD_WEBHOOK_ISSUES
     env: DISCORD_WEBHOOK_ISSUES
+
+# files that go to all repos
+files:
+  # workflows
+  - src_file: all-repos/workflows/issues.yml
+    dest_file: .github/workflows/issues.yml
+    commit_msg: "ci: update issues workflow"
