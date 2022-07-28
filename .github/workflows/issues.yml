@@ -11,8 +11,7 @@ jobs:
     name: issue-to-discord
     runs-on: ubuntu-latest
     steps:
-      - name: Post opened or reopened to discord
-        id: opened
+      - name: Post to discord
         uses: Ilshidur/action-discord@0.3.2
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_ISSUES }}
