@@ -76,3 +76,5 @@ secrets:
     value: andrewthetechie
   - key: DOCKERHUB_TOKEN
     env: DOCKERHUB_TOKEN
+  - key: DISCORD_WEBHOOK_ISSUES
+    env: DISCORD_WEBHOOK_ISSUES

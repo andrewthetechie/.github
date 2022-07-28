@@ -29,6 +29,7 @@ jobs:
         env:
           THIS_PAT: ${{ secrets.THIS_PAT }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+          DISCORD_WEBHOOK_ISSUES: ${{ secrets.DISCORD_WEBHOOK_ISSUES }}
         with:
           # Apply your settings to the repo, can also be check to just check repo settings vs your file or validate, to validate your
           # file is valid
