@@ -1,4 +1,4 @@
-name: Repo Manager Github Rust
+name: Repo Manager Rust
 # Repo Manager run to sync rust repos. Uses .github/repos/rust.yml as its config
 on: [workflow_dispatch]
 jobs:

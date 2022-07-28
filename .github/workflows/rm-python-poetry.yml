@@ -1,4 +1,4 @@
-name: Repo Manager Github python-poetry
+name: Repo Manager python-poetry
 
 on: [workflow_dispatch]
 jobs:
