@@ -72,6 +72,9 @@ branch_protections:
 secrets:
   - key: THIS_PAT
     env: THIS_PAT
+  - key: THIS_PAT
+    env: THIS_PAT
+    type: dependabot
   - key: DOCKERHUB_USERNAME
     value: andrewthetechie
   - key: DOCKERHUB_TOKEN
