@@ -85,3 +85,6 @@ files:
   - src_file: all-repos/workflows/issues.yml
     dest_file: .github/workflows/issues.yml
     commit_msg: "ci: update issues workflow"
+  - src_file: all-repos/workflows/dependabot-auto-merge.yml
+    dest_file: .github/workflows/dependabot-auto-merge.yml
+    commit_msg: "ci: update dependabot-auto-merge workflow"
