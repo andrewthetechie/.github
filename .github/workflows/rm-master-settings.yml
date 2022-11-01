@@ -7,7 +7,6 @@ jobs:
       matrix:
         repo:
           - andrewthetechie
-          - cloudquery-policy-to-s3
           - complexity-docker
           - geekbot-api-py
           - gha-clone-releases
