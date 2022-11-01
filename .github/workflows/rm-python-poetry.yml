@@ -10,11 +10,12 @@ jobs:
           - pydantic-pynamodb
           - py-healthchecks.io
           - sns-sub-manager
+          - pydantic-sqs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         name: Checkout
-      - name: Run RepoManager Rust
+      - name: Run RepoManager Python
         uses: andrewthetechie/gha-repo-manager@v1.1.0
         with:
           action: apply

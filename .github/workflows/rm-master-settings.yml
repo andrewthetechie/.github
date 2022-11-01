@@ -21,6 +21,7 @@ jobs:
           - dd-metric
           - dd-event-rs
           - download-gha-logs-rs
+          - pydantic-sqs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
