@@ -15,7 +15,7 @@ jobs:
           all_but_latest: true
           access_token: ${{ secrets.THIS_PAT }}
       - name: Set up Python 3.9
-        uses: actions/setup-python@v4.0.0
+        uses: actions/setup-python@v4.3.0
         with:
           python-version: "3.9.2"
       - uses: actions/setup-go@v3
