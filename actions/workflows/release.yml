@@ -59,7 +59,7 @@ jobs:
           cache-to: type=gha,mode=max
       - name: Update Action Dockerfile with Jinja
         id: update_action-dockerfile
-        uses: cuchi/jinja2-action@v1.2.0
+        uses: cuchi/jinja2-action@v1.2.1
         with:
           template: Docker/ActionDockerfile.j2
           output_file: Dockerfile
