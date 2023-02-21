@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
         name: Checkout
       - name: Run RepoManager Python
-        uses: andrewthetechie/gha-repo-manager@v1.1.0
+        uses: andrewthetechie/gha-repo-manager@v1.3.0
         with:
           action: apply
           settings_file: .github/rm-config/python-poetry.yml
