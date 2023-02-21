@@ -18,6 +18,7 @@ jobs:
           # - { python: "3.8", os: "ubuntu-latest", session: "mypy" }
           # - { python: "3.7", os: "ubuntu-latest", session: "mypy" }
           - { python: "3.10", os: "ubuntu-latest", session: "tests" }
+          - { python: "3.11", os: "ubuntu-latest", session: "tests" }
           - { python: "3.9", os: "ubuntu-latest", session: "tests" }
           - { python: "3.8", os: "ubuntu-latest", session: "tests" }
           - { python: "3.7", os: "ubuntu-latest", session: "tests" }
@@ -73,13 +74,15 @@ jobs:
         run: |
           import hashlib
           import sys
+          import os
 
           python = "py{}.{}".format(*sys.version_info[:2])
           payload = sys.version.encode() + sys.executable.encode()
           digest = hashlib.sha256(payload).hexdigest()
           result = "${{ runner.os }}-{}-{}-pre-commit".format(python, digest[:8])
-
-          print("::set-output name=result::{}".format(result))
+          
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+            fh.write(f"result={result}\n")
 
       - name: Restore pre-commit cache
         uses: actions/cache@v3.0.5
