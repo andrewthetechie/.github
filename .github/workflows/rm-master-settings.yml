@@ -23,6 +23,7 @@ jobs:
           - pydantic-sqs
           - route53-operator
           - k8s-autoannotator
+          - tf-vars-to-pydantic
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
