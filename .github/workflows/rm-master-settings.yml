@@ -1,6 +1,12 @@
 name: Repo Manager Master Settings Sync
 # Syncs master settings to most repos.
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: Repo Name to run on
+        required: false
+        default: all
 jobs:
   master-settings-sync:
     strategy:
@@ -29,8 +35,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout
+        if: matrix.repo == inputs.repo || inputs.repo == 'all'
       - name: Run RepoManager Master Settings
         uses: andrewthetechie/gha-repo-manager@v1.4.0
+        if: matrix.repo == inputs.repo || inputs.repo == 'all'
         env:
           THIS_PAT: ${{ secrets.THIS_PAT }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
