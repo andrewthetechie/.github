@@ -37,7 +37,7 @@ jobs:
         name: Checkout
         if: matrix.repo == inputs.repo || inputs.repo == 'all'
       - name: Run RepoManager Master Settings
-        uses: andrewthetechie/gha-repo-manager@v1.4.0
+        uses: andrewthetechie/gha-repo-manager@v1.6.0
         if: matrix.repo == inputs.repo || inputs.repo == 'all'
         env:
           THIS_PAT: ${{ secrets.THIS_PAT }}
