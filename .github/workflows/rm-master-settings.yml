@@ -31,6 +31,7 @@ jobs:
           - k8s-autoannotator
           - tf-vars-to-pydantic
           - cookiecutter-autodocs
+          - rtl_sdr_static
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
