@@ -32,6 +32,7 @@ jobs:
           - tf-vars-to-pydantic
           - cookiecutter-autodocs
           - rtl_sdr_static
+          - docker-direwolf
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
