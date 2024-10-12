@@ -35,6 +35,7 @@ jobs:
           - docker-direwolf
           - copy_file_to_another_repo_action
           - err-aprs-backend
+          - home-barcode-api
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
