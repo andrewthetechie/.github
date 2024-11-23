@@ -27,7 +27,6 @@ jobs:
           - copy_file_to_another_repo_action
           - err-aprs-backend
           - home-barcode-api
-          - home-k8s
           - home-k8s-pub
     runs-on: ubuntu-latest
     steps:
