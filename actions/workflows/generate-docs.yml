@@ -15,7 +15,7 @@ jobs:
           all_but_latest: true
           access_token: ${{ secrets.THIS_PAT }}
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 16
       - uses: actions/checkout@v3
