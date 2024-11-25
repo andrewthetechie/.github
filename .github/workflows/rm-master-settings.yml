@@ -30,7 +30,7 @@ jobs:
           - home-k8s-pub
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         name: Checkout
         if: matrix.repo == inputs.repo || inputs.repo == 'all'
       - name: Run RepoManager Master Settings
